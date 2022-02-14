@@ -187,60 +187,6 @@ let Register = {
             } 
             else {
                 alert(`User with email ${email.value} was successfully submitted!`)
-                
-            }    
-        })
-    }
-}
-
-
-let Login = {
-
-    render: async () => {
-        return /*html*/ `
-            <section class="section">
-                <div class="field">
-                    <p class="control has-icons-left has-icons-right">
-                        <input class="input" id="email_input" type="email" placeholder="Enter your Email">
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-envelope"></i>
-                        </span>
-                        <span class="icon is-small is-right">
-                            <i class="fas fa-check"></i>
-                        </span>
-                    </p>
-                </div>
-                <div class="field">
-                    <p class="control has-icons-left">
-                        <input class="input" id="pass_input" type="password" placeholder="Enter a Password">
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-lock"></i>
-                        </span>
-                    </p>
-                </div>
-                <div class="field">
-                    <p class="control">
-                        <button class="button is-primary" id="register_submit_btn">
-                        Log In
-                        </button>
-                    </p>
-                </div>
-
-            </section>
-        `
-    }
-    // All the code related to DOM interactions and controls go in here.
-    // This is a separate call as these can be registered only after the DOM has been painted
-    , after_render: async () => {
-        document.getElementById("register_submit_btn").addEventListener ("click",  () => {
-            let email       = document.getElementById("email_input");
-            let pass        = document.getElementById("pass_input");
-            if (email.value =='' | pass.value == '') {
-                alert (`The fields cannot be empty`)
-            } 
-            else {
-                alert(`User with email ${email.value} was successfully submitted!`)
-                
             }    
         })
     }
@@ -265,6 +211,9 @@ let Navbar = {
 
                     <div id="navbarBasicExample" class="navbar-menu is-active" aria-expanded="false">
                         <div class="navbar-start">
+                            <a class="navbar-item" href="#/">
+                                Home
+                            </a>
                             <a class="navbar-item" href="#/about">
                                 About
                             </a>
@@ -278,7 +227,7 @@ let Navbar = {
                                     <a class="button is-primary" href="#/register">
                                         <strong>Sign up</strong>
                                     </a>
-                                    <a class="button is-light" href="#/">
+                                    <a class="button is-light">
                                         Log in
                                     </a>
                                 </div>
@@ -314,7 +263,7 @@ let Bottombar = {
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
-    '/home'         : Home
+    '/'             : Home
     , '/about'      : About
     , '/p/:id'      : PostShow
     , '/register'   : Register
