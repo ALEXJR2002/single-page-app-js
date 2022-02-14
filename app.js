@@ -190,6 +190,7 @@ let Register = {
             } 
             else {
                 alert(`User with email ${email.value} was successfully submitted!`)
+<<<<<<< HEAD
                 
             }    
         })
@@ -244,6 +245,8 @@ let Login = {
             else {
                 alert(`User with email ${email.value} was successfully submitted!`)
                 location.href = "#/home"
+=======
+>>>>>>> 4f1af7d44cf97fcfb749f01a8b60d6d17c8addc5
             }    
         })
     }
@@ -268,6 +271,9 @@ let Navbar = {
 
                     <div id="navbarBasicExample" class="navbar-menu is-active" aria-expanded="false">
                         <div class="navbar-start">
+                            <a class="navbar-item" href="#/">
+                                Home
+                            </a>
                             <a class="navbar-item" href="#/about">
                                 About
                             </a>
@@ -281,7 +287,7 @@ let Navbar = {
                                     <a class="button is-primary" href="#/register">
                                         <strong>Sign up</strong>
                                     </a>
-                                    <a class="button is-light" href="#/">
+                                    <a class="button is-light">
                                         Log in
                                     </a>
                                 </div>
@@ -317,7 +323,7 @@ let Bottombar = {
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
-    '/home'         : Home
+    '/'             : Home
     , '/about'      : About
     , '/p/:id'      : PostShow
     , '/register'   : Register
