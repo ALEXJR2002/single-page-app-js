@@ -123,6 +123,9 @@ let PostShow = {
                 <p> Post Title : ${post.title} </p>
                 <p> Post Content : ${post.content} </p>
                 <p> Post Author : ${post.name} </p>
+                <button class="button is-primary" id="update_btn" onclick="location.href = '#/home'">
+                Update
+                </button>
             </section>
         `
     }
@@ -240,7 +243,7 @@ let Login = {
             } 
             else {
                 alert(`User with email ${email.value} was successfully submitted!`)
-                
+                location.href = "#/home"
             }    
         })
     }
