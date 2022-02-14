@@ -10,6 +10,10 @@ Page's Sections:
 - Register
 - Login
 
+# Authors
+* **Alexander Sánchez Sánchez**  - [Alexander Sánchez](https://github.com/ALEXJR2002)
+* **Santiago Arévalo Valencia** - [Santiago Arévalo](https://github.com/santiagoarevalo)
+
 ## License (MIT)
 Copyright 2018, Rishav Sharan
 
